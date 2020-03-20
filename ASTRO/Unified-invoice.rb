@@ -71,6 +71,5 @@ puts is_valid_company_no?('12222539') # 印出 false
 # puts '24536806'.split('').map{ |x| x.to_i }.zip([1,2,1,2,1,2,4,1]).map{ |i| i[0] * i[1] }.map{ |i| i.to_s }.map{ |i| i[0].to_i + i[1].to_i }.sum
 # p 16.to_s
 # p ('12345678'.split(""))[6]
-
 # (serial.split(""))[6].to_i == 7
 
