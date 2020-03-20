@@ -39,24 +39,21 @@
 
 
 def is_valid_company_no?(serial)
-  serial_new = serial.split('').map{ |i| i.to_i }
-  serial_new = serial_new.zip([1,2,1,2,1,2,4,1]).map{ |i| i[0] * i[1] }
-  serial_new = serial_new.map{ |i| i.to_s }
-  serial_new = serial_new.map{ |i| i[0].to_i + i[1].to_i }
-  serial_new = serial_new.sum
-
+  serial_new = serial.split('')
+                     .map{ |i| i.to_i }
+                     .zip([1,2,1,2,1,2,4,1])
+                     .map{ |i| i[0] * i[1] }
+                     .map{ |i| i.to_s }
+                     .map{ |i| i[0].to_i + i[1].to_i }
+                     .sum
   if serial.length != 8 
     puts "格式不符"
-    # return false
   elsif serial[6] == '7'
-
-
     if serial_new + 1 % 10 == 0
       return true
     else
       return false
     end
-
   else 
     if serial_new % 10 == 0
       return true
@@ -64,17 +61,16 @@ def is_valid_company_no?(serial)
       return false
     end
   end
-
 end
+
+puts is_valid_company_no?('2453680')  # 印出「格式不符」字樣
+puts is_valid_company_no?('24536870')  # 印出「格式不符」字樣
+puts is_valid_company_no?('24536806') # 印出 true
+puts is_valid_company_no?('12222539') # 印出 false
 
 # puts '24536806'.split('').map{ |x| x.to_i }.zip([1,2,1,2,1,2,4,1]).map{ |i| i[0] * i[1] }.map{ |i| i.to_s }.map{ |i| i[0].to_i + i[1].to_i }.sum
 # p 16.to_s
 # p ('12345678'.split(""))[6]
 
 # (serial.split(""))[6].to_i == 7
-
-puts is_valid_company_no?('2453680')  # 印出「格式不符」字樣
-puts is_valid_company_no?('24536870')  # 印出「格式不符」字樣
-puts is_valid_company_no?('24536806') # 印出 true
-puts is_valid_company_no?('12222539') # 印出 false
 
