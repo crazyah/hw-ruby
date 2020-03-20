@@ -46,20 +46,13 @@ def is_valid_company_no?(serial)
                      .map{ |i| i.to_s }
                      .map{ |i| i[0].to_i + i[1].to_i }
                      .sum
+                     
   if serial.length != 8 
     puts "格式不符"
   elsif serial[6] == '7'
-    if serial_new + 1 % 10 == 0
-      return true
-    else
-      return false
-    end
+    serial_new + 1 % 10 == 0
   else 
-    if serial_new % 10 == 0
-      return true
-    else
-      return false
-    end
+    serial_new % 10 == 0
   end
 end
 
