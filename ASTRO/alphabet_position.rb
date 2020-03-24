@@ -17,6 +17,7 @@ p alphabet_position("The sunset sets at twelve o' clock.")
 p alphabet_position("-.-'")
 # 印出 "" 空字串
 
+
 # text = "The sunset sets at twelve o' clock."
 # text = "-.-'"
 # r = [*"a".."z"]                                 # a~z陣列
