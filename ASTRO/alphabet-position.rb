@@ -3,7 +3,7 @@ def alphabet_position(text)
   text = text.downcase                            #轉成小寫
   text_to_array = text.split("")                  #轉成陣列
   y = text_to_array.map do |i|                    #對應成陣列index值
-    if  r.index(i) != nil 
+    if r.index(i) != nil 
       r.index(i) + 1  
     end 
   end

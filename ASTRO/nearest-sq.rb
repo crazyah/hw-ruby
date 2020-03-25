@@ -10,11 +10,13 @@ y = n
     y = y - 1
   end
 
-if  x-n > n-y
-  return y
-else
-  return x
-end
+  x-n > n-y ? y : x
+
+# if  x-n > n-y
+#   return y
+# else
+#   return x
+# end
 
 end
 puts nearest_sq(100)
@@ -23,7 +25,7 @@ puts nearest_sq(2)    # 1
 puts nearest_sq(10)   # 9
 puts nearest_sq(111)  # 121
 puts nearest_sq(9999) # 10000
-# n = 10
+# n = 100
 # x = n
 # y = n
 
