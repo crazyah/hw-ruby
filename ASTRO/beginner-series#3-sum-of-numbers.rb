@@ -26,7 +26,7 @@ end
 # p (1..4).reduce(:+)
 # p [*1..3].reduce(:+)
 
-# p get_sum(0,1)    # 1
-# p get_sum(0,-1)   # -1
-# p get_sum(1,2)    # 3
-# p get_sum(5,-1)   # 14
+p get_sum(0,1)    # 1
+p get_sum(0,-1)   # -1
+p get_sum(1,2)    # 3
+p get_sum(5,-1)   # 14
